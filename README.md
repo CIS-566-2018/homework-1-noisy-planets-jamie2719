@@ -5,10 +5,9 @@ Jamie Schwartz (jamiesch)
 Resources:
 https://en.wikipedia.org/wiki/Trilinear_interpolation
 
+Demo: http://jamie2719.github.io/homework-1-noisy-planets-jamie2719
 
-A link to your live github.io demo (we'll talk about how to get this set up in class some time before the assignment is due)
-
-Screenshots of the planets are below in the repository.
+4 screenshots of the planet are below in the repository.
 
 
 First I generated basic 3D Perlin noise in the vertex shader of the planet to determine the terrain on the planet. I ended up using summed Perlin noise for the height of the terrain; once I got the final Perlin noise value for a particular position using trilinear interpolation, I multiplied that value by the position vector to get a new position for the terrain that grew radially outward from the center of the sphere. I also calculated 3D Perlin noise to create a moving pattern for the ocean; before passing the initial position into the Perlin noise function, I multiplied it by a scaled version of the sine of the current time so that the Perlin noise values for the ocean would oscillate back and forth to mimic waves.
